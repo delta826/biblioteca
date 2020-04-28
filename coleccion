@@ -1,0 +1,72 @@
+package biblioteca_virutal1;
+
+
+public static class nodo <P>{
+	P dato;
+	nodo <P> siguiente;
+	nodo <P> anterior;
+	 
+	nodo () {
+		dato=null;
+		siguiente=null;
+		anterior=null;
+	}
+
+	nodo (P dato){
+		this.dato=dato;
+		siguiente=null;
+		anterior=null;
+	}
+
+	public void setdato( P dato){
+		this.dato=dato;
+
+	}        
+
+	public P getdato(){
+		return this.dato;
+	}
+}
+
+
+public static class lista_doblemente_enlazada <P>{
+	nodo <P> cabeza;
+	nodo <P> cola;
+	int tamanio;
+
+	public boolean vacio () {
+		return tamanio==0 ? true : false;
+	}
+
+	public P insertar(P dato){
+		if(vacio()){
+			cabeza=new nodo <P> (dato);
+			cola=cabeza;
+		}else{
+			nodo <P> aux = new nodo<P>(dato);
+			aux.anterior=cola;
+			cola.siguiente = aux;
+			cola=aux;
+		}
+	}
+
+	public P getnodo(){
+
+	}
+
+	public void eliminar(){									ordenar lista alfabéticamente para saber si se busca de adelante a atrás de acuerdo con la letra con que empiece.
+		nodo <P> aux = cabeza;
+		
+	}
+
+	public void imprimirlista(){
+
+	}
+}   
+
+
+public class coleccion {
+		lista_doblemente_enlazada lista;
+		String nombre;
+}
+
